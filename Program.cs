@@ -100,7 +100,7 @@ namespace ConsoleApplication6
                 //
 
             }
-            Candidate y = new Candidate("",0.0,0,"",0);
+            Candidate y = new Candidate("",0.0,0,"",0,0);
             Console.WriteLine(y.cgpaEligibleCandidates(list)); 
             Console.ReadLine();
         }
