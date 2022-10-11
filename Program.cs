@@ -14,8 +14,7 @@ namespace ConsoleApplication6
         string city;
         int num;
         int num2;
-        
-
+        int number;
         public Candidate(string Name, double Cgpa, int Age, string City, int Num, int Num2)
         {
             name = Name;
@@ -24,12 +23,13 @@ namespace ConsoleApplication6
             city = City;
             num = Num;
             num2 = Num2;
+            number = num +num2;
 
         }
         public string getInfo()
         {
             
-            return ("Name of Candidate is: "+name +". Cgpa is: "+ cgpa +". Age of Candidate is: " +age+" "+". Candidate resides in "+city+ "Score of Candidate "+num+num2 );
+            return ("Name of Candidate is: "+name +". Cgpa is: "+ cgpa +". Age of Candidate is: " +age+" "+". Candidate resides in "+city+ "Score of Candidate "+number );
 
         }
         public string cgpaEligibleCandidates(List<Candidate> l){
@@ -49,6 +49,7 @@ namespace ConsoleApplication6
                 }
 
             }
+            Console.WriteLine("Candidates With 3 or more than 3 CGPA:");
             
             for (int j = 0; j < list2.Count; j++)
             {
@@ -56,18 +57,61 @@ namespace ConsoleApplication6
               Console.WriteLine( list2[j]);
             }
             return "";
-           
-            //return "";
-
-            
         }
+        public string CandidateWith90(List<Candidate> l){
+            int count2 = 0;
+            Dictionary<string, double> projectPassedNames = new Dictionary<string, double>();
+            List<String> list2 = new List<string>();
+            for ( count2 = 0; count2 < 2; count2++ )
+            {
+                projectPassedNames.Add(l[count2].name,l[count2].number);
+            }
+            foreach (KeyValuePair<string, double> z in projectPassedNames)
+            {
+                if (z.Value > 180)
+                {
+                    list2.Add(z.Key);
 
-        
-    }
-    public class Document
-    {
+                }
 
-    }
+            }
+            Console.WriteLine("Candidates With more than 90% MARKS:");
+            for (int j = 0; j < list2.Count; j++)
+            {
+
+              Console.WriteLine( list2[j]);
+            }
+            return "";
+
+
+        }
+        public string CandidateWithCity(List<Candidate> l){
+            int count2 = 0;
+            Dictionary<string, string> cityCandidate = new Dictionary<string, string>();
+            List<String> list3 = new List<string>();
+            for ( count2 = 0; count2 < 2; count2++ )
+            {
+                cityCandidate.Add(l[count2].name,l[count2].city);
+            }
+            foreach (KeyValuePair<string, string> z in cityCandidate)
+            {
+                if (z.Value == "rawalpindi")
+                {
+                    list3.Add(z.Key);
+
+                }
+
+            }
+            Console.WriteLine("Candidates With City Name RAWALPINDI:");
+            for (int j = 0; j < list3.Count; j++)
+            {
+
+              Console.WriteLine( list3[j]);
+            }
+            return "";
+
+
+        }
     class Program
     {
         static public void Main(string[] args)
@@ -102,11 +146,14 @@ namespace ConsoleApplication6
             }
             Candidate y = new Candidate("",0.0,0,"",0,0);
             Console.WriteLine(y.cgpaEligibleCandidates(list)); 
+            //Candidate z = new Candidate("",0.0,0,"",0,0);
+            Console.WriteLine(y.CandidateWith90(list)); 
+            Console.WriteLine(y.CandidateWithCity(list));
             Console.ReadLine();
         }
     }
 }
-
+}
 
 
             
