@@ -1,0 +1,15 @@
+E:\C #\OOP\Assignments\TechLiftSystem\bin\Debug\net6.0\TechLiftSystem.exe
+E:\C #\OOP\Assignments\TechLiftSystem\bin\Debug\net6.0\TechLiftSystem.deps.json
+E:\C #\OOP\Assignments\TechLiftSystem\bin\Debug\net6.0\TechLiftSystem.runtimeconfig.json
+E:\C #\OOP\Assignments\TechLiftSystem\bin\Debug\net6.0\TechLiftSystem.dll
+E:\C #\OOP\Assignments\TechLiftSystem\bin\Debug\net6.0\TechLiftSystem.pdb
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.csproj.AssemblyReference.cache
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.AssemblyInfoInputs.cache
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.AssemblyInfo.cs
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.csproj.CoreCompileInputs.cache
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.dll
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\refint\TechLiftSystem.dll
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.pdb
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\TechLiftSystem.genruntimeconfig.cache
+E:\C #\OOP\Assignments\TechLiftSystem\obj\Debug\net6.0\ref\TechLiftSystem.dll
