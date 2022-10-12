@@ -154,6 +154,113 @@ namespace ConsoleApplication6
     }
 }
 }
+---------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication8
+{
+    class Candidate
+    {
+        public string name;
+        public int age;
+        public double cgpa;
+        public string city;
+        public List<Document> list2;
+
+
+
+    }
+    class Document
+    {
+        public string docName;
+        public string docPath;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Candidate> list = new List<Candidate>();
+            for (int z = 0; z < 2; z++)
+            {
+                List<Document> totalDoc = new List<Document>();
+                Console.Write("Enter your Name: ");
+                string n = Console.ReadLine();
+                Console.Write("Enter your age: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter your CGPA: ");
+                double c = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter your City: ");
+                string ct = Console.ReadLine();
+                Console.Write("How many Documents You want to add: ");
+                int numberDocument = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < numberDocument; i++)
+                {
+                    Console.Write("Enter your Document Name: ");
+                    string dName = Console.ReadLine();
+                    Console.Write("Enter your Document Path: ");
+                    string dP = Console.ReadLine();
+                    Document D = new Document();
+                    D.docName = dName;
+                    D.docPath = dP;
+                    totalDoc.Add(D);
+
+
+                }
+                Candidate C = new Candidate();
+                C.name = n;
+                C.age = a;
+                C.cgpa = c;
+                C.city = ct;
+                C.list2 = totalDoc;
+                list.Add(C);
+                
+
+
+            }
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine("name: " + list[i].name);
+
+
+                for (int j = 0; j < list[i].list2.Count; j++)
+                {
+                    Console.WriteLine(list[i].list2[j].docName);
+                    Console.WriteLine(list[i].list2[j].docPath);
+                }
+
+
+            }
+                
+            
+            //Dictionary<string, double> cgpaNames = new Dictionary<string, double>();
+            List<String> listt = new List<string>();
+            for ( int count = 0; count < list.Count; count++ )
+            {
+                if (list[count].cgpa >=3){
+                    listt.Add(list[count].name);
+
+                }
+                
+            }
+            
+            Console.WriteLine("Candidates With 3 or more than 3 CGPA:");
+            
+            for (int j = 0; j < listt.Count; j++)
+            {
+
+              Console.WriteLine(listt[j]);
+            }
+       
+            Console.ReadLine();
+
+
+        }
+    }
+}
 
 
             
