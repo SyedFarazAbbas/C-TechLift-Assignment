@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+ 
+    margin: 0;
+}
+.main{
+    height: 200px;
+    width: 400px;
+    background-color: aquamarine;
+    margin-top: 10vh;
+    margin-left: 20vw;
+    padding-left: 90px;
+    padding-top: 20px;
+}
+label{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+textarea{
+    display: block;
+    resize: none;
+    height: 50px;
+    width: 300px;
+}
+button{
+    margin-top: 5px;
+    background-color: brown;
+    color: beige;
+    height: 30px;
+    width: 90px;
+    border-radius: 3px;
+}
