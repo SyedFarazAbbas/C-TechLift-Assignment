@@ -624,6 +624,532 @@ namespace ConsoleApplication8
         }
     }
 }
+-----------------
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <input onkeyup="myCalculate()" type="text" id="fname" placeholder="" />
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        function myCalculate() {
+            var x = document.getElementById("fname").value;
+            if (x <= 600000) {
+                document.getElementById("p1").innerHTML = x/12;
+                document.getElementById("p2").innerHTML = 0;
+                document.getElementById("p3").innerHTML = x;
+                document.getElementById("p4").innerHTML = 0;
+
+            }
+            else if (1200000 > x > 600000) {
+                var xx = x - 600000;
+                var tax = xx * 2.5;
+                var yearly = x - tax;
+                document.getElementById("p1").innerHTML =  tax/12;
+                document.getElementById("p2").innerHTML = (yearly/12)- tax/12;
+                document.getElementById("p3").innerHTML = tax;
+                document.getElementById("p4").innerHTML = yearly;
+
+
+            }
+
+        }
+    </script>
+
+</body>
+</html>
+------------------
+*{
+    margin:0;
+    padding:0;
+}
+.m{
+    background-color:aqua;
+    height:150px;
+    width:40%;
+     border:2px solid purple;
+
+}
+.m input{
+    margin-top:10px;
+    margin-left:30px;
+    height:27px;
+    width:90%;
+    border:2px solid white;
+   
+
+}
+.m #b1{
+    background-color:blue;
+    color:white;
+    height:30px;
+    width:70px;
+    border-radius:3px;
+    border:2px solid blue;
+        margin-top:10px;
+         margin-left:30px;
+}
+.m #b2{
+    background-color:red;
+    color:white;
+    height:30px;
+    width:70px;
+        border-radius:3px;
+    border:2px solid red;
+        margin-top:10px;
+         margin-left:10px;
+}
+----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <style>
+        .cont {
+            position: relative;
+            margin: 5vh;
+        }
+
+        .cont2 {
+            position: absolute;
+            top: 0;
+            text-align: center;
+            padding-top: 17vh;
+        }
+
+            .cont2 p {
+                padding: 0px 200px;
+            }
+
+        .cont img {
+            width: 100%;
+        }
+
+        .l {
+            padding: 0px 200px;
+        }
+
+        button {
+            margin-left: 97vh;
+            height: 40px;
+            width: 130px;
+            background-color: green;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+            button:hover {
+                background-color: black;
+                color: lightgreen;
+            }
+
+            button:active {
+                background-color: green;
+                color: white;
+            }
+
+        .main {
+            /*border: 2px solid black;*/
+            margin: 150px 0px 550px 550px;
+            margin-bottom: 3px;
+        }
+
+        .x {
+            height: 20px;
+            width: 300px;
+        }
+        /*.formAbout input{
+                height:100px;
+                width:300px;
+
+            }*/
+        .form {
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .b {
+            margin-left: 83vh;
+            height: 40px;
+            width: 100px;
+            background-color: green;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+            .b:hover {
+                background-color: black;
+                color: lightgreen;
+            }
+
+            .b:active {
+                background-color: green;
+                color: white;
+            }
+
+        .z {
+            margin: 0;
+            padding: 0;
+        }
+
+        select {
+            height: 25px;
+            width: 310px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Question no. 1 -->
+    <!-- <h1 > Syed Faraz Abbas</h1 > <p id="hide" > My name is Syed Faraz Abbas.</p > <button onclick="myFunction()" > Click me!</button > <script > function myFunction() {
+        document .getElementById('hide').style.display = 'none';
+    }
+
+    </script >-->
+    <!-- Question no. 2 -->
+    <!-- <h1 > Changing of Picture.</h1 > <img id="img" src="icon.png" / > <button onclick="myPic()" > Click me</button > <script > function myPic() {
+        document .getElementById("img").src = "map.png";
+    }
+
+    </script >-->
+    <!-- Question no.3 -->
+    <!-- <h1 > Changing Text</h1 > <p id="pp" > Syed Faraz Abbas</p > <button onclick="myP()" > Change text</button > <script > function myP() {
+        document .getElementById("pp").innerHTML = "Ibtisam";
+    }
+
+    </script >-->
+    <!-- Question no.4 -->
+    <!-- <h1 > Alert</h1 > <p > Program to show alert </p > <button onclick="aalert()" > Click me!!</button > <script > function aalert() {
+        alert("Error!!!!");
+    }
+
+    </script >-->
+    <!-- Question No.5 -->
+    <!-- <h1 > Changing text on button</h1 > <p id="text" > Syed Faraz Abbas</p > <button onclick="change()" > click me!!</button > <script > function change() {
+        if (document.getElementById("text").innerHTML == "Syed Faraz Abbas");
+
+    {
+        document .getElementById("text").innerHTML = "Syed Dabeer Hussain Shah";
+    }
+
+    else {
+        document .getElementById("text").innerHTML = "Syed Faraz Abbas";
+    }
+
+    }
+
+    </script >-->
+    <!-- Question No.7 -->
+    <!-- <div class="m" > <input id="i" value="0" / > <button id="b1" onclick="first()" > Add</button > <button id="b2" onclick="second()" > Subtract</button > </div > <script > var num = 0; function first() {
+        var num1 = document.getElementById("i") num = num + 1;
+        num1 .value = num;
+    }
+
+    function second() {
+        var num1 = document.getElementById("i");
+        num = num - 1;
+        num1 .value = num;
+    }
+
+    </script >-->
+    <!-- Question no.8 -->
+    <!-- <div class="a" > <label > First Name</label > <input id="fName" placeholder="First Name"/ > <br / > <label > Second Name</label > <input id="lName" placeholder="Second Name" / > <br / > <label > Name Format</label > <select id="s1" > <option value="1" > first name, last name</option > <option value="2" > last name, first name</option > </select > <br / > <button onclick="myName()" > Formated Name</button > <p > formated name <strong id="s" > </strong > </p > </div > <script > function myName() {
+        var firstName = document.getElementById("fName").value;
+        var lastName = document.getElementById("lName").value;
+        if (document.getElementById("s1").value == "fName");
+
+    {
+        var Name = firstName + " " + lastName;
+    }
+
+    else {
+        var Name = lastName + " " + firstName;
+    }
+
+    document.getElementById("s").innerHTML = Name;
+    }
+
+    </script >-->
+    <!-- Question no.12 -->
+    <!-- <label > User Name</label > <input id="naam" / > <label > Password</label > <input id="p" / > <button onclick="chec()" > Login</button > <script > function chec() {
+        var count = 0;
+        var n = document.getElementById("naam").value;
+        var pp = document.getElementById("p").value;
+        const a = [ "faraz", 123, "abbas", 321, "ibi", 456 ];
+        for (var i = 0; i < a.length; i++);
+
+    {
+        if (a[i] == n);
+
+    {
+        if (a[i+1] == pp);
+
+    {
+        window .open("https://www.w3schools.com");
+        break;
+    }
+
+    }
+
+    count + = 1; if (count == 3) {
+        alert("Errors");
+    }
+
+    }
+    }
+
+
+    </script >-->
+    <!-- Question no. 9 -->
+    <!-- <label > Text</label > <textarea id="text" > </textarea > <button onclick="counnter()" > Counter</button > <p id="cc" > </p > <script > function counnter() {
+        var t = document.getElementById("text").value;
+        var c = 0;
+        for (var i = 0; i < t.length; i++);
+
+    {
+        if (t[i] != " ");
+
+    {
+        c += 1;
+    }
+
+    }
+    document.getElementById("cc").innerHTML = c;
+    }
+
+    </script >-->
+    <div class="main">
+        <div class="formBasic">
+            <h1 style="font-family:calibri">Fill your interests</h1><br />
+            <p>This is a form you want to fill up if you want to be registered.</p><br />
+            <small id="s1"></small>
+        </div>
+        <div class="form">
+            <label>Name</label><br />
+            <input id="xx" class="x" type="text" value="Write your Name" />
+            <small id="s2"></small>
+        </div>
+        <div class="form">
+            <label>Email</label><br />
+            <input id="x2" class="x" type="text" value="Write your Email" />
+            <small id="s3"></small>
+        </div>
+        <div class="form">
+            <label>DOB</label><br />
+            <input id="x3" class="x" type="date" value="Write your DOB" />
+        </div>
+        <div class="form">
+            <label>Select your Interest</label><br />
+            <!--<input class="x" type="text" value="Select" />-->
+            <select id="cars">
+                <option value="1">Engineering</option>
+                <option value="2">Medical</option>
+
+            </select>
+        </div>
+        <br />
+        <div style="" class="z">
+
+            <input style="" type="radio" name="w"> Individual
+            <input type="radio" name="w"> Oganization
+
+        </div><br />
+
+
+        <label>About you</label><br />
+        <textarea style="width:310px;max-width:310px;resize:none; height:170px;"></textarea>
+
+
+
+    </div>
+    <button onclick="checc()" class="b">Send Details</button>
+    <script>
+        function chec() {
+            var n = document.getElementById("xx").value;
+
+            var e = document.getElementById("x2").value;
+            if (n == "") {
+                document.getElementById("s1").innerHTML = "Name cannot be empyited";
+
+            }
+        }
+
+    </script>
+-----------------
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Assignment No. 1</title>
+    <style>
+        .cont{
+            position:relative;
+            margin:5vh;
+        }
+        .cont2{
+            position:absolute;
+            top:0;
+            text-align:center;
+            padding-top:17vh;
+            
+
+        }
+        .cont2 p{
+           padding: 0px 200px;
+
+        }
+        .cont img{
+            width:100%;
+        }
+        .l{
+            padding: 0px 200px;
+
+        }
+        button{
+            margin-left:97vh;
+            height: 40px;
+            width: 100px;
+            background-color:green;
+            color:white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:black;
+            color:lightgreen;
+        }
+        button:active{
+            background-color:green;
+            color:white;
+
+        }
+        .main{
+            /*border: 2px solid black;*/
+            margin: 150px 0px 550px 550px;
+            margin-bottom: 3px;
+        }
+        .x {
+            height:20px;
+            width:300px;
+        }
+        /*.formAbout input{
+            height:100px;
+            width:300px;
+            
+        }*/
+        .form{
+            margin-top:10px;
+
+        }
+        label{
+            font-weight:bold;
+        }
+        .b{
+            margin-left:83vh;
+            height: 40px;
+            width: 100px;
+            background-color:green;
+            color:white;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        .b:hover{
+            background-color:black;
+            color:lightgreen;
+        }
+        .b:active {
+                background-color: green;
+                color: white;
+            }
+        .z{
+            margin:0;
+            padding:0;
+        }
+        select{
+           height:25px;
+           width:310px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <img src="q.jpg" />
+        <div class="cont2">
+            <h1 style="font-family:Calibri">My Country</h1> 
+            <p style="font-family:Calibri">
+                My name is Syed Faraz Abbas. This is my First Assignment on HTML CSS in CureMD. Ihope to learn more from here. Hopefully, When bootcamp will be completed, I shall be ful stack developer. This is just a design without any responsiveness included.
+            </p>
+        </div>
+    </div>
+    <h2 style="text-align:center;font-family:Calibri; margin-top:0">Heading text</h2>
+    <p class="l" style="text-align:center;font-family:Calibri">HTML is Markup Language. It is used for Web Development purposes. It doesnot like any other programming language. CSS is cascading Style Sheet. It is used to fill beautify website with your custom design </p>
+    <button>Explore</button>
+    <div class="main">
+        <div class="formBasic">
+            <h1 style="font-family:calibri">Fill your interests</h1>
+            <p>This is a form you want to fill up if you want to be registered.</p>
+        </div>
+        <div class="form">
+            <label>Name</label><br />
+            <input class="x"  type="text" value="Write your Name" />
+        </div>
+        <div class="form">
+            <label>Email</label><br />
+            <input class="x" type="text" value="Write your Email" />
+        </div>
+        <div class="form">
+            <label>DOB</label><br />
+            <input class="x" type="date" value="Write your DOB" />
+        </div>
+        <div class="form">
+            <label>Select your Interest</label><br />
+            <!--<input class="x" type="text" value="Select" />-->
+            <select id="cars">
+                <option value=""></option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+        <div style="" class="z">
+       
+            <input style="" type="radio" name="w"> Individual 
+            <input type="radio" name="w"> Oganization
+
+        </div>
+        
+        
+            <label>About you</label><br />
+            <textarea style="width:310px;max-width:310px;">
+                
+            </textarea>
+    
+        
+        
+    </div>
+    <button class="b">Send Details</button>
+    
+    
+    
+
+</body>
+</html>
+----------------------------
+
+
 
 
 
