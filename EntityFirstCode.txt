@@ -1,0 +1,30 @@
+Entity Framework ( Code First Approach )
+
+1. Select Asp.net Core Web App (MVC)
+2. Now open Project in it. Then wwwroot folder contains all libraries.
+3. Now make class in Models. 
+4. Make ID --> primary key by writing [Key] above it. Import its import.
+5. Now go to Server explorer. 
+6. Add connections. Add server Name of your machine. And add database name of your choice.
+7. Now add Connection string in appsetting.json file. Save it
+8. Go to Nuget Packages.
+9. Download Microsoft. EntityFrameworkCore. v5.0.5
+10. Download Microsoft. EntityFrameworkCore.Tools. v5.0.4
+11. Download Microsoft. EntityFrameworkCore.SqlServer. v5.0.4
+12. Go to startup file. And add service. adddbContext for configuration
+13. Make new folder of data and add class applicationdbcontext. we will make table in that file.
+14. now go to nuget console.
+15. enable-migrations
+16. add-migration first            Migration is done. 
+17. make controller of your choice.
+And make constructor of it and make instance of database in it.
+18. make view of Action
+19. Now show data from controller to view first by importing namesame of model in view and then @foreach (var d in model) and show it
+20. Now perform crud operation.
+21. for create and update two actions will be made on the second one write http post and http put. 
+
+
+
+
+
+
